@@ -1,31 +1,34 @@
 <html>
     <head>
-        <title>Pomodoro Timer</title>
         <meta charset = "UTF-8"/>
         <link rel="stylesheet" href="pomodoro.css">
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Jost">
     </head>
 <body> 
-    
-<div class="sidebar">
-    <div class = "title">Pomodoro Timer</div>
-</div>
-<div class="container">
+<div class="container">   
+<div class="infobar">
+    <div class = "title">Pomodoro 
+        Timer</div>
+    <a href="#" class="more-text">About the Pomodoro Technique +</a>
+        <p id="show" class="pomodoro-about">The Pomodoro Technique was developed in the late 1980s by then university student Francesco Cirillo. Cirillo was struggling to focus on his studies and complete assignments. Feeling overwhelmed, he asked himself to commit to just 10 minutes of focused study time. Encouraged by the challenge, he found a tomato (pomodoro in Italian) shaped kitchen timer, and the Pomodoro technique was born.</p> 
+    </div>
+<div class ="timer-container">
+    <div class="minutes-wrapper">
 <div class="minutes" id="minutes"></div>
-<div class="buttons">
-<button class="btn" id="reset">Reset</btn>
-<button class="btn" id="start">Start</btn>
-<button class="btn" id="pause">Pause</btn>
-</div>
 <div class="updown">
-<input type= 'image' id="add" src="uparrow.png"></button>
-<input type= 'image'id="subtract" src="downarrow.png"></button>
+    <input type= 'image' id="add" src="uparrow.png"></button>
+    <input type= 'image'id="subtract" src="downarrow.png"></button>
+    </div>
 </div>
-<div id= "blurb" class = "about"><p class="more">About the Pomodoro Technique</p>
-    <button class = "more-text"></button>
-    <p class="pomodoro-about">The Pomodoro Technique was developed in the late 1980s by then university student Francesco Cirillo. Cirillo was struggling to focus on his studies and complete assignments. Feeling overwhelmed, he asked himself to commit to just 10 minutes of focused study time. Encouraged by the challenge, he found a tomato (pomodoro in Italian) shaped kitchen timer, and the Pomodoro technique was born.</p> </div>
+    <div class="buttons">
+        <button type="button" class="btn" id="reset">Reset</button>
+        <button type="button" class="btn" id="start">Start</button>
+        <button type="button" class="btn" id="pause">Pause</button>
+        </div>
 </div>
+</div>  
+
 
 <script src = "pomodoro.js"></script>
 </body>

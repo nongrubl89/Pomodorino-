@@ -4,6 +4,7 @@ function Timer(mins) {
   this.minutesTimer = this.minutesTimer;
   this.secondsTimer = this.secondsTimer;
   this.timerRunning = false;
+  this.breakTime = false;
 
   this.currentSeconds = function () {
     let s = this.secs - Math.round(this.mins * 60);
@@ -34,13 +35,11 @@ function decrementTimer() {
 }
 
 function startBreak() {
+  pomodoroTimer.breakTime = true;
   pomodoroTimer.mins = 5;
   pomodoroTimer.secs = pomodoroTimer.mins * 60;
   minutes.innerHTML =
     pomodoroTimer.currentMinutes() + ":" + pomodoroTimer.currentSeconds();
-  //   seconds.innerHTML = pomodoroTimer.currentSeconds();
-  //   minutes.value = pomodoroTimer.currentMinutes();
-  //   seconds.value = pomodoroTimer.currentSeconds();
   pomodoroTimer.secs--;
   pomodoroTimer.secondsTimer = setTimeout("decrementTimer()", 1000);
 }
@@ -80,10 +79,11 @@ function reduceTime() {
 }
 
 function showAboutBlurb() {
-  const aboutBlurb = document.getElementById("blurb");
-  aboutBlurb.className === "about"
-    ? (aboutBlurb.className = "about-show")
-    : (aboutBlurb.className = "about");
+  const aboutBlurb = document.getElementById("show");
+  console.log(aboutBlurb);
+  aboutBlurb.className === "pomodoro-about"
+    ? (aboutBlurb.className = "pomodoro-about-show")
+    : (aboutBlurb.className = "pomodoro-about");
 }
 
 let minutes = document.getElementById("minutes");

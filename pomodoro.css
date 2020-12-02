@@ -2,133 +2,112 @@
   font-family: "Jost";
 }
 .container {
-  font-size: 64px;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 12px;
 }
+
+.timer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 45vh 12vh;
+}
+
+.minutes-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 2/3;
+}
+
 .minutes {
-  display: grid;
-  grid-column: 4/6;
-  height: 250px;
-  grid-row-start: 2;
-  gap: 6px;
-  justify-items: center;
+  grid-column: 1/4;
+  font-size: 70px;
+  justify-content: center;
   align-content: center;
-}
-
-.about {
-  grid-column: 4/6;
-  font-size: medium;
-  grid-row-start: 5;
-  justify-content: center;
-  align-items: center;
   display: grid;
-  grid-template-columns: 75% 25%;
-  height: 40px;
-  overflow: hidden;
-  transition: all 1s ease;
-  text-align: center;
+  grid-row: 1;
 }
 
-.about-show {
-  height: 400px;
-  transition: all 0.5s ease;
-  grid-column: 4/6;
-  font-size: medium;
-  grid-row-start: 5;
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 75% 25%;
-}
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 18%;
-  height: 100%;
-  background-color: tomato;
-  box-shadow: 2px 0 2px -2px #888;
-}
-.title {
-  text-orientation: mixed;
-  font-size: 48px;
-  color: white;
-  padding-top: 25%;
-  writing-mode: vertical-rl;
-  margin-left: 65%;
-}
 .updown {
+  grid-row: 1;
+  grid-column: 1;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-column: 4/5;
-  grid-row-start: 2;
-  justify-content: left;
-  align-content: center;
+  gap: 1em;
+  justify-content: center;
   align-items: center;
-  margin-left: 25%;
+}
+
+.buttons {
+  grid-column: 2/3;
+  grid-row-start: 2;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 #start,
 #pause,
 #reset {
   height: 40px;
-  font-family: "Jost";
   font-size: 18px;
-  border-radius: 4px;
+  border-radius: 16px;
   background-color: white;
   box-shadow: none;
-  border-color: tomato;
+  border: 0.5px tomato solid;
   color: tomato;
-}
-
-.buttons {
+  width: 75%;
+  justify-self: center;
   display: grid;
-  grid-column: 4/6;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  grid-row: 3/4;
+  align-content: center;
+  box-shadow: 0.5px 0 0.5px 0.5px #888;
 }
 
-#add,
-#subtract {
-  background-color: rgb(199, 194, 194);
-  padding: 8px;
-  border-radius: 40px;
-}
-
-#add:hover,
-#subtract:hover {
+#start:hover,
+#pause:hover,
+#reset:hover {
   background-color: tomato;
-  box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.466);
+  color: white;
+}
+
+.infobar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 35%;
+  background-color: tomato;
+  box-shadow: 2px 0 2px 0.5px #888;
+}
+
+.title {
+  font-size: 48px;
+  padding: 10px;
 }
 
 .more-text {
-  background: url(add.png);
-  top: 150ppx;
-  right: 100px;
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 
 .more-text:hover {
-  width: 30px;
-  height: 30px;
-  transition: width 0.5s ease;
-  transition: height 0.5s ease;
-}
-
-.more {
-  justify-items: right;
-  display: grid;
+  color: black;
 }
 
 .pomodoro-about {
-  display: grid;
-  grid-column: 1/3;
-  text-align: justify;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pomodoro-about-show {
+  max-height: 800px;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
