@@ -138,3 +138,36 @@
     /* padding: 4px; */
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .timer-container {
+    display: grid;
+    grid-template-rows: 28vh 6vh;
+    grid-template-columns: 5% 90% 5%;
+    padding-bottom: 0.5em;
+  }
+
+  .infobar {
+    height: 55%;
+  }
+
+  .minutes {
+    font-size: 56px;
+    padding-left: 0.5em;
+  }
+
+  .more-text {
+    font-size: 16px;
+  }
+
+  .pomodoro-about,
+  .pomodoro-about-show {
+    font-size: 12px;
+    /* padding: 4px; */
+  }
+
+  .title {
+    font-size: 36px;
+    padding: 15px;
+  }
+}
