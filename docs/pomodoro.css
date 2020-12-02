@@ -117,6 +117,7 @@
     display: grid;
     grid-template-rows: 30vh 8vh;
     grid-template-columns: 5% 90% 5%;
+    padding-bottom: 0.5em;
   }
 
   .infobar {
